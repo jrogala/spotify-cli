@@ -45,18 +45,26 @@ Config stored at `~/.config/spotify-cli/config.yaml`.
 ## Examples
 
 ```bash
-# Start playback on a specific device
-spotify play --device "Kitchen Speaker"
+$ spotify devices
+ID          NAME              TYPE     ACTIVE  VOLUME
+device1abc  Living Room       speaker  *       85%
+device2def  Kitchen Speaker   speaker          60%
 
-# Search and queue a track
-spotify search "Bohemian Rhapsody"
-spotify queue add --uri spotify:track:xxx
+$ spotify search "Bohemian Rhapsody"
+#  TRACK               ARTIST  ALBUM                 URI
+1  Bohemian Rhapsody   Queen   A Night at the Opera  spotify:track:xxx
+2  Bohemian Rhapsody   Queen   Greatest Hits         spotify:track:yyy
 
-# Transfer playback to another device
-spotify transfer --device "Living Room"
+$ spotify now-playing
+Bohemian Rhapsody - Queen
+A Night at the Opera
+3:22 / 5:55  [=========>          ] 57%
 
-# Show your top tracks from the last month
-spotify top --type tracks --range short
+$ spotify top --type tracks --range short
+#  TRACK              ARTIST        ALBUM
+1  Blinding Lights    The Weeknd    After Hours
+2  Shape of You       Ed Sheeran    ÷ (Divide)
+3  As It Was          Harry Styles  Harry's House
 ```
 
 ## JSON Output
