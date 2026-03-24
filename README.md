@@ -12,11 +12,12 @@ go install github.com/jrogala/spotify-cli@latest
 
 ## Setup
 
-Authenticate via OAuth2:
-
-```bash
-spotify auth login
-```
+1. Create an app at [developer.spotify.com/dashboard](https://developer.spotify.com/dashboard), set redirect URI to `http://127.0.0.1:8888/callback`
+2. Add your client ID to `~/.config/spotify-cli/config.yaml`:
+   ```yaml
+   client_id: your_client_id
+   ```
+3. Run `spotify auth login`
 
 Config stored at `~/.config/spotify-cli/config.yaml`.
 
