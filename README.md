@@ -46,25 +46,29 @@ Config stored at `~/.config/spotify-cli/config.yaml`.
 
 ```bash
 $ spotify devices
-ID          NAME              TYPE     ACTIVE  VOLUME
-device1abc  Living Room       speaker  *       85%
-device2def  Kitchen Speaker   speaker          60%
-
-$ spotify search "Bohemian Rhapsody"
-#  TRACK               ARTIST  ALBUM                 URI
-1  Bohemian Rhapsody   Queen   A Night at the Opera  spotify:track:xxx
-2  Bohemian Rhapsody   Queen   Greatest Hits         spotify:track:yyy
+ID                                        NAME              TYPE     ACTIVE  VOLUME
+abc123def456789012345678901234567890abcdef  Living Room       speaker  *       85%
+def456789012345678901234567890abcdef123456  Kitchen Speaker   speaker          60%
 
 $ spotify now-playing
-Bohemian Rhapsody - Queen
-A Night at the Opera
-3:22 / 5:55  [=========>          ] 57%
+Status:   Playing
+Track:    Bohemian Rhapsody
+Artist:   Queen
+Album:    A Night at the Opera
+Progress: 3:22 / 5:55
+Device:   Living Room
+Volume:   85%
+
+$ spotify search "Bohemian Rhapsody"
+TRACKS
+  URI                           NAME               ARTIST  ALBUM                 DURATION
+  spotify:track:xxx             Bohemian Rhapsody  Queen   A Night at the Opera  5:55
+  spotify:track:yyy             Bohemian Rhapsody  Queen   Greatest Hits         5:55
 
 $ spotify top --type tracks --range short
-#  TRACK              ARTIST        ALBUM
-1  Blinding Lights    The Weeknd    After Hours
-2  Shape of You       Ed Sheeran    ÷ (Divide)
-3  As It Was          Harry Styles  Harry's House
+#   TRACK              ARTIST        ALBUM              URI
+1   Blinding Lights    The Weeknd    After Hours        spotify:track:xxx
+2   Shape of You       Ed Sheeran    ÷ (Divide)         spotify:track:yyy
 ```
 
 ## JSON Output
