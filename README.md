@@ -47,29 +47,31 @@ Config stored at `~/.config/spotify-cli/config.yaml`.
 
 ```bash
 $ spotify devices
-ID                                        NAME              TYPE     ACTIVE  VOLUME
-abc123def456789012345678901234567890abcdef  Living Room       speaker  *       85%
-def456789012345678901234567890abcdef123456  Kitchen Speaker   speaker          60%
+ID                                        NAME                  TYPE      ACTIVE  VOLUME
+434ab3de26b2f6be96d6666d2fe98e777163df42  bureau                Speaker   *       15%
+4469fbb3e9f7ea3ba1ede58f4ba49da9c90994f8  Web Player (Firefox)  Computer          10%
 
 $ spotify now-playing
 Status:   Playing
-Track:    Bohemian Rhapsody
-Artist:   Queen
-Album:    A Night at the Opera
-Progress: 3:22 / 5:55
-Device:   Living Room
-Volume:   85%
+Track:    Dean Town
+Artist:   Vulfpeck
+Album:    The Beautiful Game
+Progress: 3:16 / 3:33
+Device:   bureau
+Volume:   15%
 
-$ spotify search "Bohemian Rhapsody"
-TRACKS
-  URI                           NAME               ARTIST  ALBUM                 DURATION
-  spotify:track:xxx             Bohemian Rhapsody  Queen   A Night at the Opera  5:55
-  spotify:track:yyy             Bohemian Rhapsody  Queen   Greatest Hits         5:55
+$ spotify search "Vulfpeck" --type artist
+ARTISTS
+  URI                                     NAME
+  spotify:artist:7pXu47GoqSYRajmBCjxdD6  Vulfpeck
+  spotify:artist:6xt9sJmmyYwWkJv8A6ssiU  Cory Wong
+  spotify:artist:1JyLSGXC3aWzjY6ZdxvIXh  The Fearless Flyers
 
-$ spotify top --type tracks --range short
-#   TRACK              ARTIST        ALBUM              URI
-1   Blinding Lights    The Weeknd    After Hours        spotify:track:xxx
-2   Shape of You       Ed Sheeran    ÷ (Divide)         spotify:track:yyy
+$ spotify top --type tracks --range short_term
+#   TRACK                 ARTIST              ALBUM                                URI
+1   トドメの一撃              Vaundy, Cory Wong   replica                              spotify:track:7sd09c...
+2   Stay With Me          Cory Wong           Lost In The Wonder                   spotify:track:5dcr3Z...
+3   Master Of Puppets     Metallica           Master Of Puppets (Remastered)       spotify:track:2MuWTI...
 ```
 
 ## JSON Output
