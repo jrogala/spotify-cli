@@ -2,6 +2,14 @@
 
 CLI for Spotify playback control and library browsing.
 
+## Install
+
+Download a binary from the [latest release](https://github.com/jrogala/spotify-cli/releases/latest), or install with Go:
+
+```bash
+go install github.com/jrogala/spotify-cli@latest
+```
+
 ## Setup
 
 Authenticate via OAuth2:
